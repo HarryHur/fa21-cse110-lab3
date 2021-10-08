@@ -1,18 +1,188 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+
+   <link rel="preconnect" href="https://fonts.googleapis.com"> 
+   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+   <link href="https://fonts.googleapis.com/css2?family=Ephesis&display=swap" rel="stylesheet">
+    
+    <style>
+    #title{
+        background-color: black ;
+    }
+    .box{
+            border-style: double;
+            border-color: greenyellow;
+            border-width: 10px;
+            border-radius: 5px;
+        }
+    span{
+            display:block;
+        }
+    .boxc{
+        height: 10vh;
+        width: 3cm;
+        max-width: 0.5in;
+        min-width: 0.3in;
+    }
+    h1.sticky{
+        position: -webkit-sticky;
+        position: sticky;
+        top: 20px;
+    }
+    a:hover{
+        color:brown;
+    }
+    a:active{
+        background-color: yellow;
+    }
+
+    .container{
+        display: flex;
+        background-color: black;
+        flex-direction: row;
+    }
+    .container > div{
+        background-color: brown;
+        margin: 10px;
+        padding: 10px;
+        font-size: 20px;
+    }
+    .container2{
+        display: flex;
+        background-color: black;
+        flex-wrap: wrap;
+    }
+    .container2 > div{
+        background-color: dodgerblue;
+        margin: 10px;
+        padding: 10px;
+        font-size: 20px;
+    }
+    .container3{
+        display: flex;
+        background-color: black;
+        flex-direction: row-reverse;
+    }
+    .container3 > div{
+        background-color: darkgrey;
+        margin: 10px;
+        padding: 10px;
+        font-size: 20px;
+    }
+    .item-a{
+        grid-area: number1;
+    }
+    .item-b{
+        grid-area: number2;
+    }
+    .item-c{
+        grid-area: number3;
+    }
+    .item-d{
+        grid-area: number4;
+    }
+    .item-e{
+        grid-area: number5;
+    }
+    .item-f{
+        grid-area: number6;
+    }
+    .item-g{
+        grid-area: number7;
+    }
+    .item-h{
+        grid-area: number8;
+    }
+    .item-i{
+        grid-area: number9;
+    }
+    .item-j{
+        grid-area: number0;
+    }
+    .grid-container{
+        display: grid;
+        margin-left: 5px;
+        grid-template-columns: 30px 30px 30px;
+        grid-template-rows: auto;
+        grid-template-areas: "number1 number2 number3"
+                             "number4 number5 number6"
+                             "number7 number8 number9"
+                             ". number0 .";
+                            
+    }
+    div.example {
+        background-color: crimson;
+        padding: 20px;
+    }
+
+    @media screen and (max-width: 600px){
+        div.example{
+            display: none;
+        }
+    }
+
+    h4.example2{
+        font-family: "Ephesis", cursive;
+    }
+
+    *.red {
+       background-color: red;
+    }
+
+    h5{
+        color: blue;
+    }
+
+    li[attribute=foo]{
+        background-color: purple;   
+    }
+
+    details, summary{
+        background-color: yellow;
+    }
+
+    ul li{
+        background-color: coral;
+    }
+
+    ol > li{
+        background-color: burlywood;
+    }
+
+    h6 ~ ul{
+        background-color: palevioletred;
+    }
+
+    ul + h5{
+        background-color: olive;
+    }
+    </style>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Meeting Minutes</title>
-   <!-- <link rel="stylesheet" href="https://favicon.io/emoji-favicons/hundred-points"> -->
-   <!--<link rel="shortcut icon" href="https://favicon.io/emoji-favicons/hundred-points"> -->
-   <link rel="icon" type="image/x-icon" href="favicon.ico"/> 
+   <link rel="icon" type="image/x-icon" href="favicon.ico"/>
+   <link rel="stylesheet" href="prac.css">
+
 </head>
+
 <body>
     <header>
-    <div>Meeting minutes</div>
-    <nav>
+    <div class="box">
+        <p id="title"> Meeting minutes</p></div>
+    <div style="display: none;">THIS IS HIDDEN</div>
+    <div class="example", attribute="you">Will be Hidden with small screen</div>
+    
+    <h4 class="example2"> I wanna go sleep</h4>
+    <h5 class="red">My background is red</h5>
+    <ul>
+        <li attribute="foo">I'm black with purple</li>
+        <li>I'm not black</li>
+    </ul>
+    
+    
+    <nav style="font-size: 1.5rem;">
         <ul>
             <li><a href="opening"></a>Opening</li>
             <li><a href="present"></a>Present</li>
@@ -20,11 +190,36 @@
             <li><a href="agenda"></a>Agenda</li>
         </ul>
     </nav>
+
+    <h6>what happend</h6>
+    <ul>
+        <li>Meeting</li>
+        <li>snack</li>
+        <li>list</li>
+    </ul>
+
+    <h5>color will be different</h5>
+
+    <div class="container">
+        <div>I'm</div>
+        <div>Flex</div>
+        <div>Elem</div>
+    </div>
+
+    <br>
+
+    <div class="container3">
+        <div>I'm</div>
+        <div>Reverse</div>
+        <div>Elem</div>
+    </div>
+
+
     </header>
     <main>
-        <h1>Weekly Meeting</h1>
-        <h2>Meeting Minutes</h2>
-        <h3>October 1, 2021</h3>
+        <h1 class="sticky">Weekly Meeting</h1>
+        <h2> <a class="hover"> Meeting Minutes</a></h2>
+        <h3 class="boxc">October 1, 2021</h3>
         <img src="https://www.pinclipart.com/picdir/big/378-3788196_university-of-california-uc-san-diego-tritons-logo.png" 
         alt="Triton"
         width="250">
@@ -39,7 +234,7 @@
 
         <section><b>Present</b></section>
 
-        <p><i>Harry</i> <em>, Reyner</em></p>
+        <p><a class="active"><i>Harry</i></a> <em>, Reyner</em></p>
 
         <br>
 
@@ -66,7 +261,7 @@
                         <input type="checkbox"> What is the problems?
                     </li>
                     <li>
-                        <input type="checkbox"> How to improve our <span style="color:blue"> community </span>?
+                        <input type="checkbox"> How to improve our <span style="color:blue"> community?</span>
                     </li>
                     <li>
                         <input type="checkbox"> Which one is the best way that we can do?
@@ -93,6 +288,13 @@
             <summary>Go ahead</summary>
             Trick or Treat
         </details>
+
+        <div class="container2">
+            <div>I'm</div>
+            <div>vertical</div>
+            <div>Elem</div>
+
+        </div>
         <hr>
 
         <footer>
@@ -149,7 +351,19 @@
                 <br>
                 <textarea name="area" id="area" cols="30" rows="10"></textarea>
             </fieldset>
-            
+            <p>For subscribtion through phone</p>
+            <div class="grid-container">
+                <div class="item-a">1</div>
+                <div class="item-b">2</div>
+                <div class="item-c">3</div>
+                <div class="item-d">4</div>
+                <div class="item-e">5</div>
+                <div class="item-f">6</div>
+                <div class="item-g">7</div>
+                <div class="item-h">8</div>
+                <div class="item-i">9</div>
+                <div class="item-j">0</div>
+            </div>
         </footer>
     </main>
 </body>
