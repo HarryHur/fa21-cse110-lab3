@@ -1,0 +1,56 @@
+/*
+A comment for lab3
+*/
+
+body{
+    background-color: rgb(95, 95, 204);
+}
+
+div{
+    font-size: 3vw;
+    color: whitesmoke;
+    width: 300px;
+    margin: auto;
+    text-decoration: underline;
+    position: static;
+    font-family: fantasy;
+}
+
+h1 {
+    color: yellow;
+    font-size: 0.5in;
+    margin-left: 5px;
+    text-align: center;
+    size: 3cm;
+}
+
+h2{
+    font-size: 25pt;
+    color:hsl(30, 80%, 50%)
+}
+
+h3{
+    color: #FFFFFF;
+}
+
+section{
+    font-size: 1.5em;
+}
+
+ol{
+    margin-top: 30px;
+    margin-bottom: 30px;
+    margin-right: 150px;
+    margin-left: 5px;
+
+    padding-top: 30px;
+    padding-right: 30px;
+    padding-bottom: 50px;
+    padding-left: 50px;
+    
+}
+
+ul{
+    margin: 30px 150px 30px 5px;
+    padding: 30px 30px 50px 50px;
+}
