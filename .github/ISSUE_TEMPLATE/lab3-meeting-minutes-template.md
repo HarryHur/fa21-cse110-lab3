@@ -1,6 +1,6 @@
 ---
 name: Lab3 meeting minutes template
-about: Describe this issue template's purpose here.
+about: Creating meeting minutes template
 title: BUG
 labels: Lab3
 assignees: HarryHur
